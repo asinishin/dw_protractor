@@ -6,4 +6,4 @@ test:
   pre:
     - npm run update-webdriver
   override:
-    - protractor e2e/protractor.conf.js
+    - protractor e2e/protractor.conf.js --suite=focus
