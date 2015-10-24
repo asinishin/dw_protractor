@@ -60,7 +60,7 @@ describe('Usage with Pass Credit', function() {
             sidebar.page.selectItem('MEMBER USAGE REPORT');
 
             expect(element.all(by.repeater('usage in memberUsage.usages')).count()).toEqual(5);
-            expect(element(by.css('ff-info')).getText()).toContain('2.75');
+            expect(element(by.css('ff-info')).getText()).toContain('-0.25');
         });
     });
 });
