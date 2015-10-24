@@ -53,13 +53,14 @@ describe('Usage with Pass Credit', function() {
 
             element(by.model('vm.charge.nextBillDate')).getAttribute('value')
                 .then(function(nextChargeStr) {
-                    var nextChargeDate = new Date(nextChargeStr).toISOString().split('T')[0];
-                    sandboxApi.runSweep(nextChargeDate);
+                    var nextChargeDate = new Date(nextChargeStr); //.toISOString().split('T')[0];
+                    var nextInvoiceDate = new Date(nextChargeDate.setDate(nextChargeDate.getDate() - 1)).toISOString().split('T')[0];
+                    sandboxApi.runSweep(nextInvoiceDate);
 
                     sidebar.page.selectItem('POST PAYMENTS OR CHARGES');
-                    element.all(by.css('.purchase-list ff-btn[sense="edit"] button')).last().click();
+                    element.all(by.repeater('order in orders')).first().element(by.css('ff-btn[sense="edit"] button')).click();
 
-                    expect(element.all(by.repeater('item in vm.purchase.items')).count()).toEqual(4);
+                    expect(element.all(by.repeater('item in vm.purchase.items')).count()).toEqual(3);
                 });
         });
     });
