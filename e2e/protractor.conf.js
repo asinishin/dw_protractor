@@ -28,10 +28,10 @@ exports.config = {
 
     suites: {
         //focus: 'specs/02.member.self-registration.spec.js',
-        focus: 'specs/03.self-registration.check.spec.js',
+        //focus: 'specs/03.self-registration.check.spec.js',
         //focus: 'specs/04-coordinator-reservation.spec.js',
         //focus: 'specs/10.signup-pass-member.spec.js',
-        //focus: 'specs/11.pass-usage.spec.js',
+        focus: 'specs/11.pass-usage.spec.js',
         //focus: 'specs/15.bucket-usage.spec.js',
         //focus: 'specs/activate-member-by-coordinator.spec.js',
         //focus: 'specs/signup-member.spec.js',
