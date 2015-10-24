@@ -1,0 +1,32 @@
+{
+  "name": "deskworks",
+  "description": "Web application for co-working centers",
+  "version": "0.0.86",
+  "homepage": "https://github.com/ngbp/ngbp",
+  "licenses": {
+    "type": "MIT",
+    "url": "https://raw.github.com/ngbp/ngbp/master/LICENSE"
+  },
+  "bugs": "https://github.com/ngbp/ngbp/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ngbp/ngbp.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^1.2.x",
+    "karma": "^0.13.x",
+    "karma-coverage": "^0.4.x",
+    "karma-firefox-launcher": "^0.1.x",
+    "karma-jasmine": "^0.3.x",
+    "karma-phantomjs-launcher": "^0.2.x",
+    "lodash": "^3.10.x",
+    "protractor": "^2.1.x",
+    "run-sequence": "^1.1.x"
+  },
+  "scripts": {
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e/protractor.conf.js"
+  }
+}
